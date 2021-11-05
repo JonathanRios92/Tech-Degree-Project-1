@@ -11,6 +11,41 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
+let quotes = [
+  {
+    quote: `No matter what you're going through, there's a light at the end of the tunnel.`,
+    source: 'Demi Lovato',
+    citation: 'Pinterest',
+    year: '2017'
+  },
+  {
+    quote: '',
+    source: '',
+    citation: '',
+    year: ''
+  },
+  {
+    quote: '',
+    source: '',
+    citation: '',
+    year: ''
+  },
+  {
+    quote: '',
+    source: '',
+    citation: '',
+    year: ''
+  },
+  {
+    quote: '',
+    source: '',
+    citation: '',
+    year: ''
+  }
+
+];
+
+console.log(quotes);
 
 
 /***
