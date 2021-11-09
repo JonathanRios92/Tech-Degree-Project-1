@@ -55,7 +55,9 @@ let quotes = [
 function getRandomQuote() {
   let randomNumber = quotes[Math.floor(Math.random() * quotes.length)];
   return randomNumber;
-};
+  };
+
+
 
 
 
@@ -85,8 +87,10 @@ function printQuote() {
     `
   }
   
+
   return html;
- 
+
+  
 };
 
 
@@ -96,7 +100,11 @@ function printQuote() {
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-
+/**** document.getElementById('quote-box').innerHTML = printQuote();
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+*****/
 
-document.getElementById('quote-box').innerHTML = printQuote(); 
+document.getElementById('load-quote').addEventListener("click", function() {
+  getRandomQuote();
+  document.getElementById('quote-box').innerHTML = randomQuote;
+});
