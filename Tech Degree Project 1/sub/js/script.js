@@ -16,8 +16,7 @@ let quotes = [
     quote: `No matter what you're going through, there's a light at the end of the tunnel.`,
     source: 'Demi Lovato',
     citation: 'Pinterest',
-    year: '2017',
-    tag: 'Entertainment'
+    year: '2017'
   },
   {
     quote: 'A journey of a thousand miles begins with a single step.',
@@ -88,39 +87,26 @@ function printQuote() {
   <p class="source">${randomQuote.source} 
   `
   
-  if ( randomQuote.citation !== '' ) {
+  if ( randomQuote.citation === '' ) {
    
-    html += `<span class="citation">${randomQuote.citation}</span>`;
+    quotes.splice(2, 1);
   
   } else {
   
-    quotes.splice(2, 1);
+    html += `<span class="citation">${randomQuote.citation}</span>`; 
   
   };
 
-  if ( randomQuote.year !== '' ) {
-  
-    html += `<span class="citation">${randomQuote.year}</span>`
-  
-  } else {
+  if ( randomQuote.year === '' ) {
   
     quotes.splice(3, 1);
-    
-  } 
-
-  if ( randomQuote.tag !== '' ) {
-   
-    html += `<span class="tag">${randomQuote.tag}</span>
+  
+  } else {
+  
+    html += `<span class="citation">${randomQuote.year}</span>
     </p>
     `
-
-  } else {
-    
-    quotes.splice(4, 1);
-    
-  }
-  
-
+  } 
  
   document.getElementById('quote-box').innerHTML = html;
 };
