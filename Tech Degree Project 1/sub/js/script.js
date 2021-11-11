@@ -27,14 +27,13 @@ let quotes = [
   {
     quote: 'The way to get started is to quit talking and begin doing.',
     source: 'Walt Disney',
-    citation: '',
-    year: '1950'
+    year: '1950',
+    tag: 'Entertainment'
   },
   {
     quote: 'The easily outraged are easily manipulated. If you can’t control your emotions, other people will',
     source: 'Gurwinder',
-    citation: 'Reddit',
-    year: ''
+    citation: 'Reddit'
   },
   {
     quote: 'Age is just a number, and your talent will never fail you. It has no expiry date.',
@@ -87,26 +86,23 @@ function printQuote() {
   <p class="source">${randomQuote.source} 
   `
   
-  if ( randomQuote.citation === '' ) {
+  if ( randomQuote.citation ) {
    
-    quotes.splice(2, 1);
-  
-  } else {
-  
     html += `<span class="citation">${randomQuote.citation}</span>`; 
   
   };
 
-  if ( randomQuote.year === '' ) {
+  if ( randomQuote.year ) {
   
-    quotes.splice(3, 1);
-  
-  } else {
-  
-    html += `<span class="citation">${randomQuote.year}</span>
+    html += `<span class="citation">${randomQuote.year}</span>`
+    
+  };
+
+  if ( randomQuote.tag ) {
+    html += `<span class="citation">${randomQuote.tag}</span>
     </p>
     `
-  } 
+  }
  
   document.getElementById('quote-box').innerHTML = html;
 };
