@@ -46,18 +46,21 @@ let quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * getRandomQuote` function
+ * randomNumber stores the random quote generator
+ * randomQuotes than stores the output of quotes and randomNumber 
 ***/
 
 function getRandomQuote() {
-  let randomNumber = quotes[Math.floor(Math.random() * quotes.length)];
-  return randomNumber;
+  let randomNumber = Math.floor(Math.random() * quotes.length);
+  let randomQuotes = quotes[randomNumber]
+  return randomQuotes;
   };
 
+
 /*** 
- * 
  * Random Color Function
- * 
+ * function created to change the background color everytime
 ***/
 
 function randomBgColor() {
@@ -74,6 +77,11 @@ function randomBgColor() {
 
 /***
  * `printQuote` function
+ * This function stores the random background color 
+ * Stores a variable string called html that target special classes in the index.html
+ * adds to the string to get the final result
+ * a conditional statement to see if there are objects in the array
+ * if they are they get added to the html variable
 ***/
 
 function printQuote() {
@@ -110,7 +118,7 @@ function printQuote() {
 /***
 *
 * Time Interval function
-*
+* This allows the background color and quote to change every ten seconds
 ***/
 setInterval(printQuote, 10000);
 
